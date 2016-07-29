@@ -1,0 +1,25 @@
+{
+  "name": "pug-php/pug-assets",
+  "description": "Pug template assets manager",
+  "type": "library",
+  "require": {
+    "pug-php/pug": "^2.0.0",
+    "pug-php/pug-minify": "^1.0",
+    "pug-php/pug-filter-stylus": "^2.0",
+    "pug-php/pug-filter-coffee-script": "^1.2",
+    "pug-php/pug-filter-markdown": "^1.1"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kyle Katarn",
+      "email": "kylekatarnls@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-0": {
+      "Pug": "src/"
+    }
+  }
+}
