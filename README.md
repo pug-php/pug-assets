@@ -29,3 +29,5 @@ unset($assets);
 $pug->render('... minify ...'); // here minfiy, assets or concat are simple tags again
 ```
 For more information about the concat/minify usage, see https://github.com/pug-php/pug-minify#readme
+
+**Pug-Assets** also instal the coffee, stylus and markdown pug filters to use them as inline contents.
