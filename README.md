@@ -3,7 +3,9 @@
 Manage your assets and third-party transpiler (less, stylus, coffee, babel, etc.) and allow you to concat and/or minify them in production environment.
 
 ## Install
-In the root directory of your Symfony project, open a terminal and enter:
+First you need composer if you have'nt yet: https://getcomposer.org/download/
+
+Then in the root directory of your project, open a terminal and enter:
 ```shell
 composer require pug-php/pug-assets
 ```
