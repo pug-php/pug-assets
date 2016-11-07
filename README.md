@@ -12,6 +12,7 @@ composer require pug-php/pug-assets
 
 Enable the plugin:
 ```php
+use Pug\Assets;
 use Pug\Pug;
 
 $pug = new Pug();
