@@ -1,4 +1,9 @@
 # Pug-Assets
+[![Latest Stable Version](https://poser.pugx.org/pug-php/pug-assets/v/stable.png)](https://packagist.org/packages/pug-php/pug-assets)
+[![Build Status](https://travis-ci.org/pug-php/pug-assets.svg?branch=master)](https://travis-ci.org/pug-php/pug-assets)
+[![StyleCI](https://styleci.io/repos/63942690/shield?style=flat)](https://styleci.io/repos/63942690)
+[![Test Coverage](https://codeclimate.com/github/pug-php/pug-assets/badges/coverage.svg)](https://codecov.io/github/pug-php/pug-assets?branch=master)
+[![Code Climate](https://codeclimate.com/github/pug-php/pug-assets/badges/gpa.svg)](https://codeclimate.com/github/pug-php/pug-assets)
 
 Manage your assets and third-party transpiler (less, stylus, coffee, babel, etc.) and allow you to concat and/or minify them in production environment.
 
