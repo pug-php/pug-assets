@@ -8,17 +8,17 @@ use Pug\Keyword\Minify;
 class Assets
 {
     /**
-     * @var Pug|Jade $pug
+     * @var Pug|Jade
      */
     protected $pug;
 
     /**
-     * @var Minify $minify
+     * @var Minify
      */
     protected $minify;
 
     /**
-     * @var array $links
+     * @var array
      */
     protected static $links;
 
@@ -34,9 +34,9 @@ class Assets
     }
 
     /**
-     * @param  Pug|Jade $pug
+     * @param Pug|Jade $pug
      *
-     * @return Assets   $assets
+     * @return Assets $assets
      */
     public static function enable(Jade $pug)
     {
@@ -47,9 +47,9 @@ class Assets
     }
 
     /**
-     * @param  Pug|Jade $pug
+     * @param Pug|Jade $pug
      *
-     * @return Assets   $assets
+     * @return Assets $assets
      */
     public static function disable(Jade $pug)
     {
@@ -68,9 +68,9 @@ class Assets
     }
 
     /**
-     * @param  string $environment
+     * @param string $environment
      *
-     * @return self   $this
+     * @return self $this
      */
     public function setEnvironment($environment)
     {
@@ -106,7 +106,7 @@ class Assets
     /**
      * @param Minify $minify
      *
-     * @return self   $this
+     * @return self $this
      */
     public function setMinify($minify)
     {
@@ -123,7 +123,7 @@ class Assets
     /**
      * Remove the keywords.
      *
-     * @return self   $this
+     * @return self $this
      */
     public function unsetMinify()
     {
