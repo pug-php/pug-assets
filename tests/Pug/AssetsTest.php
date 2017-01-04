@@ -2,11 +2,10 @@
 
 namespace Pug\Tests;
 
-use PHPUnit\Framework\TestCase;
 use Pug\Assets;
 use Pug\Pug;
 
-class AssetsTest extends TestCase
+class AssetsTest extends \PHPUnit_Framework_TestCase
 {
     public function testFacade()
     {
