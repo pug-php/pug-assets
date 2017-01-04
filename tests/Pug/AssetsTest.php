@@ -7,7 +7,7 @@ use Pug\Pug;
 
 class AssetsTest extends \PHPUnit_Framework_TestCase
 {
-    static private function cleanUp()
+    private static function cleanUp()
     {
         if (file_exists(__DIR__ . '/../project/web/test.css')) {
             unlink(__DIR__ . '/../project/web/test.css');
@@ -84,6 +84,7 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
 
         $assets->getMinify()->on('pre-write', function ($params) {
             $params->content = str_replace('red', 'blue', $params->content);
+
             return $params;
         });
         $html = trim(str_replace(["\r", "\n"], '', $pug->render($template)));
