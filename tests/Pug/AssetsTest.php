@@ -46,7 +46,7 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
         );
         self::assertTrue(file_exists(__DIR__ . '/../project/web/css/app.min.css'));
         self::assertSame(
-            'p{color:red}',
+            'p{color:#f00}',
             trim(file_get_contents(__DIR__ . '/../project/web/css/app.min.css'))
         );
 
@@ -83,7 +83,7 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
             "  alert 'foo'\n";
 
         $assets->getMinify()->on('pre-write', function ($params) {
-            $params->content = str_replace('red', 'blue', $params->content);
+            $params->content = str_replace('color', 'background', $params->content);
 
             return $params;
         });
@@ -96,7 +96,7 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
         );
         self::assertTrue(file_exists(__DIR__ . '/../project/web/css/app.min.css'));
         self::assertSame(
-            'p{color:blue}',
+            'p{background:#f00}',
             trim(file_get_contents(__DIR__ . '/../project/web/css/app.min.css'))
         );
 
