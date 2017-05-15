@@ -5,9 +5,10 @@
   "require": {
     "pug-php/pug": "^2.0.0",
     "pug-php/pug-minify": "^1.0.1",
-    "pug-php/pug-filter-stylus": "^2.0",
     "pug-php/pug-filter-coffee-script": "^1.2",
-    "pug-php/pug-filter-markdown": "^1.1"
+    "pug-php/pug-filter-less": "^1.0",
+    "pug-php/pug-filter-markdown": "^1.1",
+    "pug-php/pug-filter-stylus": "^2.0"
   },
   "require-dev": {
     "phpunit/phpunit": ">=4.8 <6.0",
