@@ -29,7 +29,7 @@ $pug->render('... minify ...'); // here you can use minfiy, assets or concat key
 Assets::disable($pug);
 $pug->render('... minify ...'); // here minfiy, assets or concat are simple tags again
 
-// Of the instanciation syntax:
+// Or the instanciation syntax:
 $assets = new Assets($pug);
 $pug->render('... minify ...'); // here you can use minfiy, assets or concat keywords to wrap your assets
 
