@@ -13,11 +13,6 @@ php:
   - 7.2
   - hhvm
 
-matrix:
-    include:
-        - php: 5.3
-          dist: precise
-
 before_script:
   - travis_retry composer self-update
   - travis_retry composer install --no-interaction --prefer-source --dev
