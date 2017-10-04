@@ -20,6 +20,15 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
         }
     }
 
+    protected function renderFile($pug, $file)
+    {
+        $method = method_exists($pug, 'renderFile')
+            ? array($pug, 'renderFile')
+            : array($pug, 'render');
+        
+        return call_user_func($method, $file);
+    }
+
     public function testFacade()
     {
         $pug = new Pug([
@@ -37,7 +46,7 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
 
         Assets::enable($pug);
         Assets::enable($bis);
-        $html = trim(str_replace(["\r", "\n"], '', $pug->render($template)));
+        $html = trim(str_replace(["\r", "\n"], '', $this->renderFile($pug, $template)));
 
         self::assertSame(
             '<link rel="stylesheet" href="css/app.min.css">' .
@@ -51,7 +60,7 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
         );
 
         Assets::disable($pug);
-        $html = trim(str_replace(["\r", "\n"], '', $pug->render($template)));
+        $html = trim(str_replace(["\r", "\n"], '', $this->renderFile($pug, $template)));
 
         self::assertSame(
             '<minify>app<link rel="stylesheet" href="test.styl"></minify>' .
@@ -87,7 +96,7 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
 
             return $params;
         });
-        $html = trim(str_replace(["\r", "\n"], '', $pug->render($template)));
+        $html = trim(str_replace(["\r", "\n"], '', $this->renderFile($pug, $template)));
 
         self::assertSame(
             '<link rel="stylesheet" href="css/app.min.css">' .
@@ -101,7 +110,7 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
         );
 
         unset($assets);
-        $html = trim(str_replace(["\r", "\n"], '', $pug->render($template)));
+        $html = trim(str_replace(["\r", "\n"], '', $this->renderFile($pug, $template)));
 
         self::assertSame(
             '<minify>app<link rel="stylesheet" href="test.styl"></minify>' .
