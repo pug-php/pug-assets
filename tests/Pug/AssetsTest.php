@@ -24,13 +24,13 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
     {
         $pug = new Pug([
             'strict'          => true,
-            'environment'     => 'development',
+            'environment'     => 'production',
             'assetDirectory'  => __DIR__ . '/../project/assets',
             'outputDirectory' => __DIR__ . '/../project/web',
         ]);
         $bis = new Pug([
             'strict'          => true,
-            'environment'     => 'development',
+            'environment'     => 'production',
             'assetDirectory'  => __DIR__ . '/../project/assets',
             'outputDirectory' => __DIR__ . '/../project/web',
         ]);
@@ -78,7 +78,7 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
     {
         $pug = new Pug([
             'strict'          => true,
-            'environment'     => 'development',
+            'environment'     => 'production',
             'assetDirectory'  => __DIR__ . '/../project/assets',
             'outputDirectory' => __DIR__ . '/../project/web',
         ]);
@@ -121,7 +121,7 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
     public function testEnvironnement()
     {
         $pug = new Pug([
-            'environment'     => 'development',
+            'environment'     => 'production',
             'assetDirectory'  => __DIR__ . '/../project/assets',
             'outputDirectory' => __DIR__ . '/../project/web',
         ]);
