@@ -134,4 +134,13 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
         self::assertSame('development', $assets->getEnvironment());
         self::assertSame($assets, $self);
     }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     * @expectedExceptionMessage Allowed pug engine are Jade\Jade, Pug\Pug or Phug\Renderer, stdClass given.
+     */
+    public function testBadEngine()
+    {
+        new Assets(new \stdClass());
+    }
 }
