@@ -39,11 +39,11 @@ class Assets
     }
 
     /**
-     * @param Pug|Jade $pug
+     * @param \Pug\Pug|\Jade\Jade $pug
      *
      * @return Assets $assets
      */
-    public static function enable(Jade $pug)
+    public static function enable($pug)
     {
         $assets = new static($pug);
         static::$links[] = $assets;
@@ -52,11 +52,11 @@ class Assets
     }
 
     /**
-     * @param Pug|Jade $pug
+     * @param \Pug\Pug|\Jade\Jade $pug
      *
      * @return Assets $assets
      */
-    public static function disable(Jade $pug)
+    public static function disable($pug)
     {
         $assets = null;
         static::$links = array_filter(static::$links, function ($entry) use (&$assets, $pug) {
