@@ -63,7 +63,7 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
             $html
         );
 
-        $html = trim(str_replace([' />', "\r", "\n"], ['>', '', ''], $pug->render($template)));
+        $html = trim(str_replace([' />', "\r", "\n"], ['>', '', ''], $bis->render($template)));
 
         self::assertSame(
             '<link rel="stylesheet" href="css/app.min.css">' .
