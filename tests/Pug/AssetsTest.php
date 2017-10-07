@@ -23,8 +23,8 @@ class AssetsTest extends \PHPUnit_Framework_TestCase
     protected function renderFile($pug, $file)
     {
         $method = method_exists($pug, 'renderFile')
-            ? array($pug, 'renderFile')
-            : array($pug, 'render');
+            ? [$pug, 'renderFile']
+            : [$pug, 'render'];
         
         return call_user_func($method, $file);
     }
