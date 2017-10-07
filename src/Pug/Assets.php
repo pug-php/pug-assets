@@ -2,7 +2,6 @@
 
 namespace Pug;
 
-use Jade\Jade;
 use Pug\Keyword\Minify;
 
 class Assets
@@ -25,10 +24,16 @@ class Assets
     /**
      * Assets constructor.
      *
-     * @param Pug $pug
+     * @param \Pug\Pug|\Jade\Jade $pug
      */
-    public function __construct(Jade $pug)
+    public function __construct($pug)
     {
+        if (!($pug instanceof \Jade\Jade) && !($pug instanceof \Pug\Pug) && !($pug instanceof \Phug\Renderer)) {
+            throw new \InvalidArgumentException(
+                'Allowed pug engine are Jade\\Jade, Pug\\Pug or Phug\\Renderer, ' . get_class($pug) . ' given.'
+            );
+        }
+
         $this->pug = $pug;
         $this->setMinify(new Minify($pug));
     }
