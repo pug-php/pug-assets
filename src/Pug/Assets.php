@@ -7,7 +7,7 @@ use Pug\Keyword\Minify;
 class Assets
 {
     /**
-     * @var Pug|Jade
+     * @var \Pug\Pug|\Jade\Jade
      */
     protected $pug;
 
