@@ -27,5 +27,18 @@
     "psr-0": {
       "Pug": "src/"
     }
+  },
+  "extra": {
+    "npm-confirm": {
+      "less": "It allows you to use less filter and link less files inside minify/concat tags.",
+      "clean-css": "It allows you to use minify option on CSS files and contents (recommended in production).",
+      "stylus": "It allows you to use stylus filter and link stylus files inside minify/concat tags.",
+      "coffee-script": "It allows you to use coffee-script filter and coffee-script files inside minify/concat tags.",
+      "babel-cli": "It allows you to use react/jsx filter and react/jsx files inside minify/concat tags.",
+      "babel-plugin-transform-react-jsx": "It allows you to use react/jsx filter and react/jsx files inside minify/concat tags.",
+      "babel-preset-es2015": "It allows you to use react/jsx filter and react/jsx files inside minify/concat tags.",
+      "babel-preset-react": "It allows you to use react/jsx filter and react/jsx files inside minify/concat tags.",
+      "uglify-js": "It allows you to use minify option on JS files and contents (recommended in production)."
+    }
   }
 }
