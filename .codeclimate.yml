@@ -14,6 +14,15 @@ engines:
     checks:
       CleanCode/StaticAccess:
         enabled: false
+plugins:
+  phpcodesniffer:
+    enabled: true
+  phpmd:
+    enabled: true
+  SonarPHP:
+    enabled: true
+  phan:
+    enabled: true
 ratings:
   paths:
   - "**.php"
