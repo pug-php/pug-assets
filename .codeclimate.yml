@@ -1,9 +1,8 @@
 ---
-engines:
+version: "2"
+plugins:
   duplication:
     enabled: true
-    exclude_paths:
-    - "tests/"
     config:
       languages:
       - php
@@ -14,15 +13,11 @@ engines:
     checks:
       CleanCode/StaticAccess:
         enabled: false
-plugins:
   phpcodesniffer:
-    enabled: true
-  phpmd:
     enabled: true
   SonarPHP:
     enabled: true
   phan:
     enabled: true
-ratings:
-  paths:
-  - "**.php"
+exclude_patterns:
+- "tests/"
