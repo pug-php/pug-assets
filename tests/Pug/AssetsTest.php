@@ -2,10 +2,11 @@
 
 namespace Pug\Tests;
 
+use PHPUnit\Framework\TestCase;
 use Pug\Assets;
 use Pug\Pug;
 
-class AssetsTest extends \PHPUnit_Framework_TestCase
+class AssetsTest extends TestCase
 {
     private static function cleanUp()
     {
